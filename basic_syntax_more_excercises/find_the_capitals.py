@@ -1,9 +1,8 @@
 string = input()
 i = 0
-lst = []
-
+my_list = []
 for char in string:
     if char.isupper():
-        lst.append(i)
+        my_list.append(i)
     i += 1
-print(lst)
+print(my_list)
