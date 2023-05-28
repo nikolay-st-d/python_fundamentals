@@ -188,7 +188,7 @@ if factory_is_open:  # if factory is open == True
 else:
     print(f"Closed! Cannot afford {type_of_event}.")
 
-my_list = [1, 8, 4, 89, 43, 2, 132, 2, 2, "Gosho", "gosho"]
+# my_list = [1, 8, 4, 89, 43, 2, 132, 2, 2, "Gosho", "gosho"]
 
 # my_list.sort(reverse=True)
 # print(my_list)
@@ -217,7 +217,7 @@ my_list = [1, 8, 4, 89, 43, 2, 132, 2, 2, "Gosho", "gosho"]
 # del my_list[3]
 # print(my_list)
 #
-my_list.remove("Gosho")
-print(my_list)
-my_list.remove("Pesho")
-print(my_list)
+# my_list.remove("Gosho")
+# print(my_list)
+# my_list.remove("Pesho")
+# print(my_list)

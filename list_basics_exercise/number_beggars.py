@@ -1,15 +1,18 @@
-# numbers_list = input().split(', ')
-# beggars = int(input())
-# new_list = [0] * beggars
-# sum_i = 0
-# for i in range(len(numbers_list)):
-#     beggars_i = i % beggars
-#     sum_i = int(numbers_list[i])
-#     new_list[beggars_i] += sum_i
-# print(new_list)
+string_list = input().split(', ')
+number_of_beggars = int(input())
+list_len = len(string_list)
+integers_list = []
+for string in string_list:
+    integers_list.append(int(string))
 
-integers_string = input()
-beggars = int(input())
+final_list = []
+start_index = 0
 
-for beggar in range(1, beggars + 1):
-    print(beggar)
+while start_index < number_of_beggars:
+    current_beggar_sum = 0
+    for current_index in range(start_index, list_len, number_of_beggars):
+        current_beggar_sum += integers_list[current_index]
+    final_list.append(current_beggar_sum)
+    start_index += 1
+
+print(final_list)
