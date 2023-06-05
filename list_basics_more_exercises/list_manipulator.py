@@ -1,9 +1,4 @@
 def if_even(num_input: int) -> bool:
-    """
-    Checks if a number is even
-    :param num_input: int
-    :return: bool
-    """
     if num_input % 2 == 0:
         return True
     return False
