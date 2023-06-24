@@ -19,7 +19,7 @@ class Catalogue:
         sorted_products = '\n'.join(sorted(self.products))
         return f"Items in the {self.name} catalogue:\n{sorted_products}"
 
-
+# Test code
 catalogue = Catalogue("Furniture")
 catalogue.add_product("Sofa")
 catalogue.add_product("Mirror")

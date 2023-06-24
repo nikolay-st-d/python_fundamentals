@@ -18,6 +18,7 @@ class Class:
         average_grade = self.get_average_grade()
         return f"The students in {self.name}: {', '.join(self.students)}. Average grade: {average_grade:.2f}"
 
+# Test code
 a_class = Class("11B")
 a_class.add_student("Peter", 4.80)
 a_class.add_student("George", 6.00)
