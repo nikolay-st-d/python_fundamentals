@@ -6,17 +6,17 @@ class Catalogue:
         self.name = name
 
     def add_product(self, product_name):
-        self.products.append(product_name)
+        Catalogue.products.append(product_name)
 
     def get_by_letter(self, first_letter):
         filtered_list = []
-        for product in self.products:
+        for product in Catalogue.products:
             if product[0].lower() == first_letter.lower():
                 filtered_list.append(product)
         return filtered_list
 
     def __repr__(self):
-        sorted_products = '\n'.join(sorted(self.products))
+        sorted_products = '\n'.join(sorted(Catalogue.products))
         return f"Items in the {self.name} catalogue:\n{sorted_products}"
 
 # Test code

@@ -6,11 +6,11 @@ class Storage:
 
     def add_product(self, product):
         if self.capacity > 0:
-            self.storage.append(product)
+            Storage.storage.append(product)
             self.capacity -= 1
 
     def get_products(self):
-        return self.storage
+        return Storage.storage
 
 # Test code
 storage = Storage(4)

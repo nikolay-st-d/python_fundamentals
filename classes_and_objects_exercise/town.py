@@ -6,10 +6,10 @@ class Town:
         self.name = name
 
     def set_latitude(self, latitude):
-        self.latitude = latitude
+        Town.latitude = latitude
 
     def set_longitude(self, longitude):
-        self.longitude = longitude
+        Town.longitude = longitude
 
     def __repr__(self):
         return f"Town: {self.name} | Latitude: {self.latitude} | Longitude: {self.longitude}"
