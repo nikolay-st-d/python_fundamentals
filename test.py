@@ -1,10 +1,6 @@
-class Order:
-    def __init__(self, item, pieces, price, options):
-        self.item = item
-        self.pieces = pieces
-        self.price = price
-        self.options = options
+def bit_on_position(num, position):
+    mask = 1 << position
+    bit = num & mask
+    return bit >> position
 
-    def total_price(self, pieces, price):
-        total = pieces * price
-
+print(bit_on_position(1, 2))
