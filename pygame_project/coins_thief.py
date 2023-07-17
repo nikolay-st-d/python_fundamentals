@@ -6,24 +6,24 @@ import sys
 pygame.init()
 
 # Set up the game window
-width = 800
-height = 600
+width = 1200
+height = 900
 window = pygame.display.set_mode((width, height))
-pygame.display.set_caption("Крадеца на стотачки")
+pygame.display.set_caption("Крадецът на кюлчета")
 
 # Load the player image
-player_image = pygame.image.load("player.png")
+player_image = pygame.image.load("bb.png")
 player_size = player_image.get_rect().size
 player_x = width // 2 - player_size[0] // 2
 player_y = height - player_size[1] - 10
-player_speed = 5
+player_speed = 10
 
 # Load the item image
-item_image = pygame.image.load("item.png")
+item_image = pygame.image.load("gold.png")
 item_size = item_image.get_rect().size
 item_x = random.randint(0, width - item_size[0])
 item_y = -item_size[1]
-item_speed = 3
+item_speed = 5
 
 # Set up the score
 score = 0
@@ -31,7 +31,7 @@ font = pygame.font.Font(None, 36)
 
 # Set up game over message
 game_over_font = pygame.font.Font(None, 72)
-game_over_text = game_over_font.render("Време е да влизаш в затвора!", True, (255, 0, 0))
+game_over_text = game_over_font.render("Време е да влезеш в затвора!", True, (255, 255, 255))
 game_over_text_pos = (width // 2 - game_over_text.get_width() // 2, height // 2 - game_over_text.get_height() // 2)
 
 # Set up new game button
@@ -90,7 +90,7 @@ while running:
             state = STATE_GAME_OVER
 
     # Clear the screen
-    window.fill((255, 255, 255))
+    window.fill((0, 125, 255))
 
     # Draw the player
     window.blit(player_image, (player_x, player_y))
@@ -99,7 +99,7 @@ while running:
     window.blit(item_image, (item_x, item_y))
 
     # Draw the score
-    score_text = font.render("Откраднах: " + str(score) + '00', True, (255, 0, 0))
+    score_text = font.render("Откраднах: " + str(score), True, (255, 255, 255))
     window.blit(score_text, (10, 10))
 
     if state == STATE_GAME_OVER:
