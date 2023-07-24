@@ -1,6 +1,7 @@
-# 80/100 points, maybe it's the decrypt_regex
+# 80/100 points, to be solved later
 import re
-decrypt_regex = r's|t|a|r'
+
+decrypt_regex = r'[star]'
 match_regex = r'@([A-Za-z]*).*:([0-9]+).*!(A|D)!.*->([0-9]+)'
 number_of_messages = int(input())
 attacked_planets = []
@@ -27,4 +28,3 @@ for attacked_planet in sorted(attacked_planets):
 print(f"Destroyed planets: {len(destroyed_planets)}")
 for destroyed_planet in sorted(destroyed_planets):
     print(f"-> {destroyed_planet}")
-
