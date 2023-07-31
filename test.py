@@ -1,6 +1,9 @@
-def bit_on_position(num, position):
-    mask = 1 << position
-    bit = num & mask
-    return bit >> position
+def insert_text_at_index(text, index=0, replacement=''):
+    return f'{text[:index + 1]}{replacement}{text[index + 1:]}'
 
-print(bit_on_position(1, 2))
+
+txt = 'text text text'
+indx = 3
+replace_str = ' NEW TEXT'
+
+print(insert_text_at_index(txt, indx, replace_str))

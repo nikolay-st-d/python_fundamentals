@@ -11,11 +11,16 @@ def is_prime(num):
     return True
 
 
-def replace_str_index(text, index=0, replacement=''):
-    return f'{text[:index]}{replacement}{text[index+1:]}'
+def replace_char_at_index(string, index=0, replacement=''):
+    return f'{string[:index]}{replacement}{string[index+1:]}'
+
+
+def insert_text_at_index(text, index=0, replacement=''):
+    return f'{text[:index + 1]}{replacement}{text[index + 1:]}'
 
 
 def email_splitter(email):
     username, domain = email.split('@')
     print(f'Username: {username}', end=' | ')
     print(f'Domain: {domain}')
+
