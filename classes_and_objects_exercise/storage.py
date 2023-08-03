@@ -12,6 +12,7 @@ class Storage:
     def get_products(self):
         return Storage.storage
 
+
 # Test code
 storage = Storage(4)
 storage.add_product("apple")
