@@ -1,30 +1,3 @@
-def is_even(num):
-    if num % 2 == 0:
-        return True
-    return False
-
-
-def is_prime(num):
-    for i in range(2, num):
-        if num % i == 0:
-            return False
-    return True
-
-
-def replace_char_at_index(string, index=0, replacement=''):
-    return f'{string[:index]}{replacement}{string[index+1:]}'
-
-
-def insert_text_at_index(text, index=0, replacement=''):
-    return f'{text[:index + 1]}{replacement}{text[index + 1:]}'
-
-
-def email_splitter(email):
-    username, domain = email.split('@')
-    print(f'Username: {username}', end=' | ')
-    print(f'Domain: {domain}')
-
-
 def morse_to_latin_word(morse_word, morse_dict):
     decoded_word = ''
     morse_letters = morse_word.split(' ')
@@ -40,3 +13,9 @@ morse_code_dict = {".-": "A", "-...": "B", "-.-.": "C", "-..": "D", ".": "E", ".
                    "..": "I", ".---": "J", "-.-": "K", ".-..": "L", "--": "M", "-.": "N", "---": "O", ".--.": "P",
                    "--.-": "Q", ".-.": "R", "...": "S", "-": "T", "..-": "U", "...-": "V", ".--": "W", "-..-": "X",
                    "-.--": "Y", "--..": "Z"}
+
+decoded_words = []
+morse_words = input().split(' | ')
+for word in morse_words:
+    decoded_words.append(morse_to_latin_word(word.strip(), morse_code_dict))
+print(*decoded_words)
