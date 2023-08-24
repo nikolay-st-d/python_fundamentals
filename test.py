@@ -1,5 +1,9 @@
-from math import ceil
+class Item:
+    def __int__(self, name):
+        self.name = name
 
-a = 3.2
-print(ceil(a))
+    def price(self, price, quantity):
+        price = self.price * self.quantity
+        return price
+
 
